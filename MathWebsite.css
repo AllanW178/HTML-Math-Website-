@@ -1,0 +1,354 @@
+body {
+  font-family: 'Verdana', 'Arial', sans-serif;
+  background: linear-gradient(to right, #d7e1ec, #f2f6fc);
+  color: #2c3e50;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  width: 280px;
+  background: #cfe0ec;
+  padding: 25px 15px;
+  border-right: 2px solid #a0bacc;
+  box-shadow: inset -1px 0 4px rgba(0,0,0,0.1);
+}
+
+.logo-container {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.title {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #003566;
+}
+
+.subtitle {
+  font-size: 0.9em;
+  color: #375f7b;
+  font-style: italic;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.sidebar li {
+  margin: 15px 0;
+}
+
+.sidebar a {
+  display: block;
+  text-decoration: none;
+  color: #37474f;
+  padding: 10px 15px;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.sidebar a:hover {
+  background-color: rgba(0, 53, 102, 0.1);
+}
+
+.sidebar strong {
+  display: block;
+  font-size: 1.1em;
+  margin-bottom: 5px;
+  color: #002244;
+}
+
+.sidebar span {
+  display: block;
+  font-size: 0.9em;
+  color: #4a6b7d;
+  line-height: 1.4;
+}
+
+
+body.index .sidebar a[href="index.html"],
+body.about .sidebar a[href="about.html"],
+body.attend .sidebar a[href="attend.html"],
+body.community .sidebar a[href="community.html"] {
+
+  background-color: rgba(0, 53, 102, 0.15);
+  box-shadow: inset 3px 0 0 #003566;
+  color: #003566;
+
+}
+
+.main-content {
+  flex: 1;
+  padding: 40px;
+  background: #ffffff;
+  border-left: 2px solid #dde7f0;
+  box-shadow: inset 1px 0 3px rgba(0,0,0,0.05);
+}
+
+.fancy-heading {
+  font-size: 1.4em;
+  color: #003566;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 8px;
+}
+
+.fade-in {
+  opacity: 1;
+  transition: opacity 0.3s ease-in;
+}
+
+
+
+.level-selector {
+  margin: 20px 0;
+}
+
+.level-selector input[type="radio"] {
+  display: none;
+}
+
+.level-selector label {
+  display: inline-block;
+  padding: 8px 15px;
+  background-color: #cfe0ec;
+  border: 1px solid #a0bacc;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s;
+  margin-right: 10px;
+}
+
+.level-selector label:hover {
+  background-color: #b0c4de;
+}
+
+.level-selector input[type="radio"]:checked + label {
+  background-color: #003566;
+  color: white;
+}
+
+.level-descriptions {
+  margin-top: 15px;
+  padding: 15px;
+  background-color: #f2f6fc;
+  border-radius: 4px;
+}
+
+.description {
+  display: none;
+}
+
+#beginner:checked ~ .level-descriptions [data-level="beginner"],
+#intermediate:checked ~ .level-descriptions [data-level="intermediate"],
+#advanced:checked ~ .level-descriptions [data-level="advanced"] {
+
+  display: block;
+
+
+}
+
+
+
+
+.post-form {
+  margin: 20px 0;
+}
+
+.post-form textarea {
+  width: 100%;
+  height: 120px;
+  padding: 10px;
+  border: 1px solid #a0bacc;
+  border-radius: 4px;
+  resize: vertical;
+
+
+}
+
+.form-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.btn-primary {
+  padding: 8px 20px;
+  background-color: #003566;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+
+
+}
+
+.btn-primary:hover {
+  background-color: #002244;
+
+}
+
+.char-count {
+  color: #666;
+  font-size: 0.9em;
+
+
+}
+
+.posts-container {
+  margin-top: 30px;
+}
+
+.post {
+  background-color: #f2f6fc;
+  padding: 15px;
+  border-radius: 4px;
+  margin-bottom: 15px;
+  
+}
+
+.post h4 {
+  margin-top: 0;
+  color: #003566;
+
+}
+
+.post-meta {
+  font-size: 0.8em;
+  color: #666;
+  margin-top: 10px;
+
+
+}
+
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+
+  }
+  
+  .sidebar {
+    width: 100%;
+    border-right: none;
+    border-bottom: 2px solid #a0bacc;
+    padding: 15px;
+
+
+  }
+  
+  .main-content {
+    padding: 20px;
+
+  }
+  
+  .sidebar ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+
+
+  }
+  
+  
+  .sidebar li {
+    margin: 5px 0;
+    flex: 1 1 150px;
+
+
+  }
+  
+  .level-selector {
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+  }
+
+
+  
+  .level-selector label {
+    margin-right: 0;
+    width: 100%;
+    text-align: center;
+
+
+  }
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
