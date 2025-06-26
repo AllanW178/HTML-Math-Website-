@@ -12,6 +12,26 @@ body {
   
 }
 
+/* main subtitle for the main content */
+.main-title-1 {
+  font-size: 200%;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+/* main text for the main content */
+.content-text {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+/* video customization */
+.video-1 {
+  border-radius: 5%;
+  border-width: 0.5vh;
+  border-color: rgba(207, 224, 236);
+  display: block;
+
+}
 
 
 /* Flexbox layout: sidebar + main content */
@@ -416,7 +436,6 @@ body.community .sidebar a[href="community.html"] {
 
   
 }
-
 
 
 
